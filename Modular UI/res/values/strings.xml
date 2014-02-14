@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">To Do List</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_fragment1">Fragment 1</string>
+    <string name="title_activity_fragment2">Fragment 2</string>
+
+    <string-array name="titles">
+        <item>Wake Shantanu Up</item>
+        <item>Kiss Shantanu</item>
+        <item>Make Awesome Breakfast</item>
+        <item>Praise Shantanu</item>
+        <item>Take A Shower</item>
+        <item>Go Out For A Romantic Lunch</item>
+        <item>Watch A Romantic Movie</item>
+        <item>Get Another Massage</item>
+        <item>Do What You Want</item>
+        <item>Finally</item>
+    </string-array>
+    
+    <string-array name="descriptions">
+        <item>Wake Shantanu up if you haven\'t already and tell him how 
+            much you adore him and love him!</item>
+        <item>Make Shantanu and brush and kiss him SO tightly that it makes 
+            him want to gasp for air!</item>
+        <item>Make AWESOME breakfast! Take Shantanu\'s help if he\'s awake. 
+            If he\'s sleeping you did step 1 incorrectly!</item>
+        <item >Tell Shantanu how good looking he is and tell him how much 
+            you love him!</item>
+       	<item>Take and intimate shower with Shantanu and GOOF around later!</item>
+    	<item>Take Shantanu to one of he resteraunts you always wanted to go 
+    	    to!</item>
+    	<item>Watch A Super Romantic Movie Together Ya!</item>
+    	<item>Get another massage if you aren\'t satisfied with yesterdays 
+    	    massage. Shantanu can\'t say no!</item>
+    	<item>Do everything and anything you want! After all it\s Vanshika\'s
+    	    Day!</item>
+    	<item>Just know that even after today is over, Shantanu will keep 
+    	    loving you FOREVER and his love for you will grow by every 
+    	    passing moment, for as long as you live and die.</item>
+    </string-array>
+
+    <string name="title_activity_interface">Interface</string>
+
+</resources>
