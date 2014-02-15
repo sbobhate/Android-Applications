@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:baselineAligned="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="#00BBFF" >
+    
+    <fragment
+        android:id="@+id/fragment1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:name="com.example.modularui.Fragment1"
+        android:layout_weight="1"
+        android:layout_gravity="center_horizontal|top"
+        />
+    <fragment 
+        android:id="@+id/fragment2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:name="com.example.modularui.Fragment2"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_weight="1"
+        />
+
+</LinearLayout>
