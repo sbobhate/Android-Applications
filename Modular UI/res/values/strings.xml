@@ -15,17 +15,10 @@
     </string-array>
     
     <string-array name="descriptions">
-<<<<<<< HEAD
         <item>This is the description for item 1.</item>
         <item>This is the description for item 2.</item>
         <item>This is the description for item 3.</item>
         <item>This is the description for item 4.</item>
-=======
-        <item>This is the description of item 1.</item>
-        <item>This is the description of item 2.</item>
-        <item>This is the description of item 3.</item>
-        <item>This is the description of item 4.</item>
->>>>>>> 6a5002d3aea140bc77f6fe32003bea97671b350e
     </string-array>
 
     <string name="title_activity_interface">Interface</string>
