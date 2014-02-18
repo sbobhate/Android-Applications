@@ -1,0 +1,15 @@
+package com.example.fragmenttransition;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.app.Fragment;
+import android.view.Menu;
+
+public class Fragment1 extends Fragment {
+
+	public void onAttach (Activity activity)
+	{
+		
+	}
+
+}

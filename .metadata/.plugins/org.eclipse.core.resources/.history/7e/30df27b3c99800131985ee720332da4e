@@ -1,0 +1,55 @@
+package com.example.fragmenttransition;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
+import android.view.Menu;
+import android.view.View;
+
+public class MainActivity extends Activity {
+	
+	FragmentManager manager;
+	
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        
+        manager = getFragmentManager();
+    }
+
+    public void addA (View v)
+    {
+    	Fragment1 f1 = new Fragment1();
+    	FragmentTransaction transaction = manager.beginTransaction();
+    	transaction.add(R.id.group, f1, "1");
+    	transaction.commit();
+    }
+    
+    public void addB (View v)
+    {
+    	Fragment2 f2 = new Fragment2();
+    	FragmentTransaction transaction = manager.beginTransaction();
+    	transaction.add(R.id.group, f2, "2");
+    	transaction.commit();
+    }
+    
+    public void removeA (View v)
+    {
+    	
+    }
+    
+    public void removeB (View v)
+    {
+    	
+    }
+    
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+    
+}
