@@ -53,12 +53,22 @@ public class MainActivity extends Activity {
     
     public void removeB (View v)
     {	
-    	
+    	Fragment2 f2 = (Fragment2) manager.findFragmentByTag("2");
+    	FragmentTransaction transaction = manager.beginTransaction();
+    	if (f2 != null) 
+    	{
+    		transaction.remove(f2);
+    		transaction.commit();
+    	}
+    	else
+    	{
+    		Toast.makeText(this, "The Fragment was not added before",Toast.LENGTH_SHORT).show();
+    	}
     }
     
     public void replaceAwithB (View v)
     {
-    	Fragment2 f2 = (Fragment2) manager.findFragmentByTag("2");
+    	Fragment2 f2 = new Fragment2();
     	FragmentTransaction transaction = manager.beginTransaction();
     	transaction.replace(R.id.group, f2, "2");
     	transaction.commit();
@@ -66,7 +76,10 @@ public class MainActivity extends Activity {
     
     public void replaceBwithA (View v)
     {
-    	
+    	Fragment1 f1 = new Fragment1();
+    	FragmentTransaction transaction = manager.beginTransaction();
+    	transaction.replace(R.id.group, f1, "1");
+    	transaction.commit();
     }
     
     public void attachA (View v)
