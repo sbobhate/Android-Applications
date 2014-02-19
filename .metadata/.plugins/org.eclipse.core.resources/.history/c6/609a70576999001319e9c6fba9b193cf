@@ -1,0 +1,104 @@
+package com.example.orient;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.content.res.Resources;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
+import android.support.v4.app.NavUtils;
+
+public class Instructions extends Activity {
+	
+	TextView text;
+	TextView text2;
+	int counter;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_instructions);
+		// Show the Up button in the action bar.
+		setupActionBar();
+		
+		text = (TextView) findViewById(R.id.textView1);
+		text2 = (TextView) findViewById(R.id.textView2);
+		counter = 0;
+		changeData(counter);
+	}
+	
+	public void increase (View v)
+	{	
+		Resources res = getResources();
+		String[] steps = res.getStringArray(R.array.steps);
+		int length = steps.length;
+		if (counter < (length-1)) 
+		{
+		counter += 1;
+		changeData(counter);
+		}
+		else
+		{
+			Toast.makeText(this, "No Further Steps", Toast.LENGTH_SHORT).show();
+		}
+	
+	}
+	
+	public void decrease (View v)
+	{	
+		if (counter >= 0)
+		{
+			counter -= 1;
+			changeData(counter);
+		}
+		else
+		{
+			Toast.makeText(this, "This is the First Step", Toast.LENGTH_SHORT).show();
+		}
+	}
+	
+	public void changeData (int i)
+	{	
+		Resources res = getResources();
+		String[] steps = res.getStringArray(R.array.steps);
+		String[] instructions = res.getStringArray(R.array.instructions);
+		text.setText(steps[i]);
+		text2.setText(instructions[i]);
+	}
+	
+	/**
+	 * Set up the {@link android.app.ActionBar}.
+	 */
+	private void setupActionBar() {
+
+		getActionBar().setDisplayHomeAsUpEnabled(true);
+
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.instructions, menu);
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case android.R.id.home:
+			// This ID represents the Home or Up button. In the case of this
+			// activity, the Up button is shown. Use NavUtils to allow users
+			// to navigate up one level in the application structure. For
+			// more details, see the Navigation pattern on Android Design:
+			//
+			// http://developer.android.com/design/patterns/navigation.html#up-vs-back
+			//
+			NavUtils.navigateUpFromSameTask(this);
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
+
+}

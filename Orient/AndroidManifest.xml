@@ -22,6 +22,38 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.example.orient.Instructions"
+            android:label="@string/title_activity_instructions"
+            android:parentActivityName="com.example.orient.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.orient.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.orient.Reader"
+            android:label="@string/title_activity_reader"
+            android:parentActivityName="com.example.orient.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.orient.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.orient.InstructionsListFragment"
+            android:label="@string/title_activity_instructions_list_fragment" >
+        </activity>
+        <activity
+            android:name="com.example.orient.Fragment1"
+            android:label="@string/title_activity_fragment1" >
+        </activity>
+        <activity
+            android:name="com.example.orient.AboutUs"
+            android:label="@string/title_activity_about_us"
+            android:parentActivityName="com.example.orient.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.orient.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

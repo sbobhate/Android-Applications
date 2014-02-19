@@ -1,0 +1,55 @@
+package com.example.orient;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.Menu;
+
+public class MainActivity extends Activity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        
+        setupActionBar();
+    }
+
+    private void setupActionBar() {
+		getActionBar().setDisplayHomeAsUpEnabled(false);
+	}
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		//return super.onCreateOptionsMenu(menu);
+		return true;
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case android.R.id.home:
+            return true;
+        case R.id.instructions:
+        	go_to_projects();
+        	return true;
+        case R.id.reader:
+        	go_to_about_us();
+        	return true;
+		  default:
+		    	return super .onOptionsItemSelected(item);
+		}
+	}
+	
+	public void go_to_projects() {
+		Intent newActivity = new Intent(this, Projects.class);
+		startActivity(newActivity);
+	}
+	
+	public void go_to_about_us() {
+		Intent newActivity = new Intent(this, AboutUs.class);
+		startActivity(newActivity);
+	}
+    
+}

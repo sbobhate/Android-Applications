@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">List Fragment</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+
+    <string-array name="heros">
+        <item>Superman</item>
+        <item>Batman</item>
+        <item>Hawk Womam</item>
+        <item>Wonder Woman</item>
+        <item>Flash</item>
+        <item>Green Lantern</item>
+        <item>John</item>
+    </string-array>
+
+    <string name="title_activity_fragment">Choose Your Super-Hero</string>
+
+</resources>

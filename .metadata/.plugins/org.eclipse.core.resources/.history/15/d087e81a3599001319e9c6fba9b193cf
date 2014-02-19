@@ -1,0 +1,16 @@
+package com.example.orient;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.app.Fragment;
+import android.view.Menu;
+
+public class Fragment1 extends Fragment {
+
+	@Override
+	public View (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+	{
+		View view = inflater.inflate(R.id.activity.fragment1, container, false);
+	}
+
+}
