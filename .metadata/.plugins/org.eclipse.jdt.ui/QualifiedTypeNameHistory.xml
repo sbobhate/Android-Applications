@@ -3,7 +3,6 @@
 <fullyQualifiedTypeName name="com.example.fragmenttransition.R.layout"/>
 <fullyQualifiedTypeName name="com.example.listfragment.R.layout"/>
 <fullyQualifiedTypeName name="com.example.listfragment.R.array"/>
-<fullyQualifiedTypeName name="android.R"/>
 <fullyQualifiedTypeName name="android.R.layout"/>
 <fullyQualifiedTypeName name="android.widget.AdapterView"/>
 <fullyQualifiedTypeName name="android.view.MenuItem"/>
@@ -22,7 +21,6 @@
 <fullyQualifiedTypeName name="android.view.GestureDetector.SimpleOnGestureListener"/>
 <fullyQualifiedTypeName name="android.view.MotionEvent"/>
 <fullyQualifiedTypeName name="com.example.instructionnavigation.R.id"/>
-<fullyQualifiedTypeName name="android.widget.ImageView"/>
 <fullyQualifiedTypeName name="com.example.instructionnavigation.R.drawable"/>
 <fullyQualifiedTypeName name="android.widget.Toast"/>
 <fullyQualifiedTypeName name="android.widget.ImageButton"/>
@@ -35,7 +33,6 @@
 <fullyQualifiedTypeName name="android.os.Bundle"/>
 <fullyQualifiedTypeName name="android.content.Intent"/>
 <fullyQualifiedTypeName name="android.widget.TextView"/>
-<fullyQualifiedTypeName name="com.example.ewbproject.R.id"/>
 <fullyQualifiedTypeName name="android.graphics.Color"/>
 <fullyQualifiedTypeName name="android.view.LayoutInflater"/>
 <fullyQualifiedTypeName name="com.example.orient.R"/>
@@ -45,4 +42,9 @@
 <fullyQualifiedTypeName name="android.view.ViewGroup"/>
 <fullyQualifiedTypeName name="android.view.View"/>
 <fullyQualifiedTypeName name="android.app.FragmentManager"/>
+<fullyQualifiedTypeName name="com.example.ewbproject.R.id"/>
+<fullyQualifiedTypeName name="android.widget.ImageView"/>
+<fullyQualifiedTypeName name="com.example.ewbproject.R.drawable"/>
+<fullyQualifiedTypeName name="android.R"/>
+<fullyQualifiedTypeName name="android.R.id"/>
 </qualifiedTypeNameHistroy>
