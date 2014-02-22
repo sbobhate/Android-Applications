@@ -54,6 +54,18 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.orient.MainActivity" />
         </activity>
+        <activity
+            android:name="com.example.orient.CdmaVisual"
+            android:label="@string/title_activity_cdma_visual"
+            android:parentActivityName="com.example.orient.Reader" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.orient.Reader" />
+        </activity>
+        <activity
+            android:name="com.example.orient.Fragment2"
+            android:label="@string/title_activity_fragment2" >
+        </activity>
     </application>
 
 </manifest>

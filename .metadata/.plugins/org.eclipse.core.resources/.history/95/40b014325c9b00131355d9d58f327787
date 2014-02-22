@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/blueprint"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="123dp"
+        android:contentDescription="@string/blueprint"
+        android:src="@drawable/blueprint" />
+
+    <ImageView
+        android:id="@+id/step1Tutorial"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="36dp"
+        android:contentDescription="@string/step1_tutorial"
+        android:src="@drawable/step1tutorial" />
+
+    <ImageView
+        android:id="@+id/step1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/step1Tutorial"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@string/step1"
+        android:src="@drawable/step1" />
+    
+</RelativeLayout>

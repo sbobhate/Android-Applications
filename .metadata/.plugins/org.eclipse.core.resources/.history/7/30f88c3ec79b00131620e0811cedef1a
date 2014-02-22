@@ -1,0 +1,7 @@
+package com.example.ewbproject;
+
+import android.app.Fragment;
+
+public class Page8 extends Fragment {
+
+}

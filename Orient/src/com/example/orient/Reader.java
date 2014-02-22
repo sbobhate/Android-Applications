@@ -3,14 +3,19 @@ package com.example.orient;
 import android.os.Bundle;
 
 import android.app.Activity;
+import android.app.FragmentManager;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 import android.support.v4.app.NavUtils;
 import android.telephony.TelephonyManager;
 import android.telephony.PhoneStateListener;
 
 public class Reader extends Activity {
+	
+	FragmentManager manager;
 	
 	SignalStrengthListener signalStrengthListener;
 	 TextView cdmadbm;
@@ -20,6 +25,9 @@ public class Reader extends Activity {
 	 TextView evdosnr;
 	 TextView gsmerror;
 	 TextView gsm;
+	 
+	 //Bundle bundle = new Bundle();
+	 //Fragment2 frag = new Fragment2();
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +43,9 @@ public class Reader extends Activity {
 		   evdosnr = (TextView)findViewById(R.id.evdosnr);
 		   gsmerror = (TextView)findViewById(R.id.gsmerror);
 		   gsm = (TextView)findViewById(R.id.gsm);
-
+		   
+		   manager = getFragmentManager();
+		   
 		   //start the signal strength listener
 		  signalStrengthListener = new SignalStrengthListener();	           
 		   ((TelephonyManager)getSystemService(TELEPHONY_SERVICE)).listen(signalStrengthListener,SignalStrengthListener.LISTEN_SIGNAL_STRENGTHS);
@@ -86,17 +96,38 @@ public class Reader extends Activity {
 	     int EvdoSnr = signalStrength.getEvdoSnr();
 	     int GsmError = signalStrength.getGsmBitErrorRate();
 	     int Gsm = signalStrength.getGsmSignalStrength();
-	    
+	     
+	     // Send data to Fragment2:
+	     //bundle.putInt("cdmaDbm", CdmaDbm);
+	     //frag.setArguments(bundle);
+	     
 	    //do something with it (in this case we update a text view)
-	    cdmadbm.setText("CDMA dBm: "+ String.valueOf(CdmaDbm));
+	    if (CdmaDbm == -120)
+	    	cdmadbm.setText("No Network");
+	    else
+	    	cdmadbm.setText("CDMA dBm: "+ String.valueOf(CdmaDbm));
 	    cdmaecio.setText("CDMA EC/IO: " + String.valueOf(CdmaEcio));
-	    evdodbm.setText("Evdo dBm: " + String.valueOf(EvdoDbm));
+	    if (CdmaDbm == -120)
+	    	evdodbm.setText("No Network");
+	    else
+	    	evdodbm.setText("Evdo dBm: " + String.valueOf(EvdoDbm));
 	    evdoecio.setText("Evdo EC/IO: " + String.valueOf(EvdoEcio));
 	    evdosnr.setText("Evdo snr: " + String.valueOf(EvdoSnr));
-	    gsmerror.setText("GSM Bit Error Rate: " + String.valueOf(GsmError));
-	    gsm.setText("GSM Signal Strength: " + String.valueOf(Gsm));
+	    if (GsmError == 99)
+	    	gsmerror.setText("No Network");
+	    else 
+	    	gsmerror.setText("GSM Bit Error Rate: " + String.valueOf(GsmError));
+	    if (Gsm == 99)
+	    	gsm.setText("No Network");
+	    else
+	    	gsm.setText("GSM Signal Strength: " + String.valueOf(Gsm));
 	    super.onSignalStrengthsChanged(signalStrength);
 	  }
+	}
+	
+	public void showCdmaVisual (View v)
+	{
+		
 	}
 
 }

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Orient</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_overflow">Overflow</string>
+    <string name="instructions">Instructions</string>
+    <string name="reader">Reader</string>
+    <string name="title_activity_instructions">Instructions</string>
+    <string name="title_activity_reader">Reader</string>
+    <string name="logo">Logo</string>
+    <string name="title_activity_instructions_list_fragment">List</string>
+
+    <string-array name="steps">
+        <item>Step 1</item>
+        <item>Step 2</item>
+        <item>Step 3</item>
+        <item>Step 4</item>
+        <item>Step 5</item>
+    </string-array>
+    <string-array name="instructions">
+        <item>These are the set of instructions for Step 1. Lorem Ipsum Lorem Ipsum
+            Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</item>
+        <item>These are the set of instructions for Step 2.</item>
+        <item>These are the set of instructions for Step 3.</item>
+        <item>These are the set of instructions for Step 4.</item>
+        <item>These are the set of instructions for Step 5.</item>
+    </string-array>
+
+    <string name="title_activity_fragment1">Instructions</string>
+    <string name="back">Back</string>
+    <string name="next">Next</string>
+    <string name="title_activity_about_us">About Us</string>
+    <string name="title_activity_cdma_visual">CdmaVisual</string>
+
+</resources>

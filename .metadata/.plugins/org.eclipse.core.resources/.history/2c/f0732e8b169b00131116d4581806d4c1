@@ -1,0 +1,43 @@
+package com.example.orient;
+
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.app.Fragment;
+import android.app.FragmentManager;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.ViewGroup;
+import android.support.v4.app.NavUtils;
+import android.telephony.PhoneStateListener;
+import android.telephony.TelephonyManager;
+
+public class CdmaVisual extends Fragment {
+	
+	Fragment2 f2;
+	FragmentManager manager;
+	SignalStrengthListener signalStrengthListener;
+	
+	@Override
+	protected View onCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+		return inflater.inflate(R.layout.activity_cdma_visual, container, false);
+		
+		manager = getFragmentManager();
+		
+		signalStrengthListener = new SignalStrengthListener();	           
+		   ((TelephonyManager)getSystemService(TELEPHONY_SERVICE)).listen(signalStrengthListener,SignalStrengthListener.LISTEN_SIGNAL_STRENGTHS);
+	}
+	
+	private class SignalStrengthListener extends PhoneStateListener
+	 {
+	  @Override
+	  public void onSignalStrengthsChanged(android.telephony.SignalStrength signalStrength) {
+		 int CdmaDbm = signalStrength.getCdmaDbm();
+		 f2 = (Fragment2) manager.findFragmentById(R.id.quality);
+		 f2.checkQuality(CdmaDbm);
+	     super.onSignalStrengthsChanged(signalStrength);
+	  }
+	 }
+
+}
